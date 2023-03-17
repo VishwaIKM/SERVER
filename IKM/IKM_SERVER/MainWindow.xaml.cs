@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IKM_SERVER.DataBase_Management;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,26 @@ namespace IKM_SERVER
         public MainWindow()
         {
             InitializeComponent();
+            calldata();
+        }
+
+        private void calldata()
+        {
+            try
+            {
+                using (var context = new MyContext())
+                {
+                    var query = context.user.Where(p => p.USR_PassWord == "7777" && p.USR_login_Id == "Vishwa").FirstOrDefault();
+                    if (query != null)
+                        MessageBox.Show("User ID or Password" + query.USR_Access_Lvl);
+                    else
+                        MessageBox.Show("Failed");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
