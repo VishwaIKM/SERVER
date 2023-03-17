@@ -25,3 +25,12 @@ D:\WorkSpace\IKMSERVERDETAIL_VISHWA\IKM\IKM_SERVER\bin\Debug\EntityFramework.Sql
 D:\WorkSpace\IKMSERVERDETAIL_VISHWA\IKM\IKM_SERVER\bin\Debug\EntityFramework.xml
 D:\WorkSpace\IKMSERVERDETAIL_VISHWA\IKM\IKM_SERVER\bin\Debug\EntityFramework.SqlServer.xml
 D:\WorkSpace\IKMSERVERDETAIL_VISHWA\IKM\IKM_SERVER\obj\Debug\IKM_SERVER.csproj.CopyComplete
+D:\WorkSpace\IKMSERVERDETAIL_VISHWA\IKM\IKM_SERVER\bin\Debug\MaterialDesignColors.dll
+D:\WorkSpace\IKMSERVERDETAIL_VISHWA\IKM\IKM_SERVER\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\WorkSpace\IKMSERVERDETAIL_VISHWA\IKM\IKM_SERVER\bin\Debug\Microsoft.Xaml.Behaviors.dll
+D:\WorkSpace\IKMSERVERDETAIL_VISHWA\IKM\IKM_SERVER\bin\Debug\MaterialDesignColors.pdb
+D:\WorkSpace\IKMSERVERDETAIL_VISHWA\IKM\IKM_SERVER\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\WorkSpace\IKMSERVERDETAIL_VISHWA\IKM\IKM_SERVER\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\WorkSpace\IKMSERVERDETAIL_VISHWA\IKM\IKM_SERVER\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+D:\WorkSpace\IKMSERVERDETAIL_VISHWA\IKM\IKM_SERVER\bin\Debug\Microsoft.Xaml.Behaviors.xml
+D:\WorkSpace\IKMSERVERDETAIL_VISHWA\IKM\IKM_SERVER\obj\Debug\App.baml

@@ -33,7 +33,7 @@ namespace IKM_SERVER
             {
                 using (var context = new MyContext())
                 {
-                    var query = context.user.Where(p => p.USR_PassWord == "7777" && p.USR_login_Id == "Vishwa").FirstOrDefault();
+                    var query = context.User_DBSet.Where(p => p.USR_PassWord == "7777" && p.USR_login_Id == "Vishwa").FirstOrDefault();
                     if (query != null)
                         MessageBox.Show("User ID or Password" + query.USR_Access_Lvl);
                     else

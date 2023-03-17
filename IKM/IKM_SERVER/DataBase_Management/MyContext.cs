@@ -1,4 +1,4 @@
-﻿using IKM_SERVER.DataBase_Management.Table_Object;
+﻿using IKM_SERVER.DataBase_Management.Table_Model;
 using System.Data.Entity;
 
 namespace IKM_SERVER.DataBase_Management
@@ -8,6 +8,6 @@ namespace IKM_SERVER.DataBase_Management
         public MyContext():base("IKM_SERVER_DB")
         {
         }
-        public virtual DbSet<Users> user { get; set; }
+        public virtual DbSet<UsersModel> User_DBSet { get; set; }
     }
 }
