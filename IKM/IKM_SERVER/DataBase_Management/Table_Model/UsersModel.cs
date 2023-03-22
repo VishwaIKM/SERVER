@@ -12,12 +12,12 @@ namespace IKM_SERVER.DataBase_Management.Table_Model
     public class UsersModel
     {
         [Key]
-        //[Required(ErrorMessage = "Please Enter UserId")]
-        //[Display(Name = "Please Enter UserId")]
+        [Required(ErrorMessage = "Please Enter UserId")]
+        [Display(Name = "Please Enter UserId")]
         public string USR_login_Id { get; set; }
 
-        //[Required(ErrorMessage = "Please Enter Password")]
-        //[Display(Name = "Please Enter Password")]
+        [Required(ErrorMessage = "Please Enter Password")]
+        [Display(Name = "Please Enter Password")]
         public string USR_PassWord { get; set; }
 
         public int USR_Access_Lvl { get; set; }
