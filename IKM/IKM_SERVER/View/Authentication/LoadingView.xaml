@@ -10,7 +10,8 @@
         WindowStyle="None"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
-        ContentRendered="Window_ContentRendered">
+        ContentRendered="Window_ContentRendered"
+        Background="Transparent" Topmost="True">
     <materialDesign:Card
         UniformCornerRadius="15"
         Background="{DynamicResource MaterialDesignPaper}"

@@ -4,9 +4,123 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IKM_SERVER.View.Authentication"
+        xmlns:LoginViewModel="clr-namespace:IKM_SERVER.ViewModel"
+        xmlns:materialDesign ="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="LoginView" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Loading" Height="300" Width="750"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        Topmost="True">
+    <Window.DataContext>
+        <LoginViewModel:AuthenticationViewModel/>
+    </Window.DataContext>
+    <materialDesign:Card
+        UniformCornerRadius="15"
+        Background="{DynamicResource MaterialDesignPaper}"
+        Margin="25"
+        >
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"></ColumnDefinition>
+                <ColumnDefinition Width="400"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel
+                Grid.Column="0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Margin="30 0 0 0"
+                >
+                <WrapPanel>
+                    <Image 
+                        Source="IMAGE/IKMlogo.png"
+                        HorizontalAlignment="Left"
+                        Height="45"
+                        Width="90"
+                        />
+                    <TextBlock 
+                        Text="IKM Server Details"
+                        FontSize="15"
+                        FontWeight="DemiBold"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Margin="10 0 0 0"></TextBlock>
+                </WrapPanel>
+              
+
+            </StackPanel>
+                
+            <StackPanel
+                     Grid.Column="0"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Bottom"
+                     Margin="10 10 10 20">
+                <Label
+                    FontSize="9"
+                    Foreground="Red"
+                    Content="{Binding Path=CalculatorOutput, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+
+            <!--Login and Application exit Btn Stack Panel-->
+            <StackPanel
+                Grid.Column="1"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Orientation="Horizontal"
+                Margin="20 10 60 20"
+                >
+                <Button
+                    Name="LoginBtn"
+                    Content="Login"
+                    Margin="10"
+                    Command="{Binding LoginCommand}"
+                    IsEnabled="{Binding IsLoginButtonEnable}"
+                   >
+
+                </Button>
+                <Button
+                    x:Name="ExitBtn"
+                    Content="Exit"
+                    Command="{Binding ExitAppCommand}"
+                   >
+
+                </Button>
+            </StackPanel>
+            <!-- Login and Application Text box-->
+            <StackPanel
+                Grid.Column="1"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="30 30 10 10"
+                Orientation="Vertical"
+                >
+                <TextBox
+                    Margin="10"
+                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    VerticalAlignment="Top"
+                    materialDesign:HintAssist.Hint="User Id"
+                    Width="300" 
+                    >
+                    <TextBox.Text>
+
+                        <Binding 
+                            Path="UserID"
+                            
+                            UpdateSourceTrigger="PropertyChanged">
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+                <PasswordBox
+                    Margin="10"
+                    Style="{StaticResource MaterialDesignOutlinedPasswordBox}"
+                    materialDesign:HintAssist.Hint="User Password"
+                    materialDesign:PasswordBoxAssist.Password="{Binding Path=Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True}" />
+
+
+            </StackPanel>
+        </Grid>
+
+    </materialDesign:Card>
 </Window>
